@@ -4,7 +4,6 @@ import Fabricjs from "./Fabricjs";
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
   Link,
 } from "react-router-dom";
 
