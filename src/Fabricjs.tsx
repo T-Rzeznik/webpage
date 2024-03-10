@@ -1,4 +1,11 @@
+import {
+    Link,
+  } from "react-router-dom";
 const Fabricjs = ()=>{
-    return <>hi</>;
+    return <>
+    
+    <Link to="/">Home</Link>
+    
+    </>;
 };
 export default Fabricjs;
