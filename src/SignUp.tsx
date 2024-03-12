@@ -5,6 +5,8 @@ import { TextField, Button, Container, Typography, Box, Link } from '@mui/materi
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Checkbox from '@mui/material/Checkbox';
 
+const [agreeToTerms, setAgreeToTerms] = useState(false);
+
 const theme = createTheme({
   palette: {
     mode: 'light',
