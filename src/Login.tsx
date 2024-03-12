@@ -76,6 +76,9 @@ const LoginPage: React.FC = () => {
           <Button variant="contained" color="primary" fullWidth type="submit">
             Login
           </Button>
+           <Typography variant="body2" align="center">
+              <Link href="#">Forgot password?</Link>
+            </Typography>
         </form>
       </Box>
     </Container>
