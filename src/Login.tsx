@@ -1,5 +1,14 @@
 import React, { useState } from 'react';
-import { TextField, Button, Container, Typography, Box } from '@mui/material';
+import { TextField, Button, Container, Typography, Box, createTheme } from '@mui/material';
+
+const theme = createTheme({
+  palette: {
+    mode: 'dark',
+    primary: {
+      main: '#ff007f', // Fuchsia pink 
+    },
+  },
+});
 
 const LoginPage: React.FC = () => {
   const [username, setUsername] = useState('');
