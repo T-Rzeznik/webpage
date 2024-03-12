@@ -25,6 +25,7 @@ const LoginPage: React.FC = () => {
   };
 
   return (
+<ThemeProvider theme={theme}>
     <Container maxWidth="xs">
       <Box mt={5}>
         <Typography variant="h4" align="center">Login</Typography>
@@ -52,6 +53,7 @@ const LoginPage: React.FC = () => {
         </form>
       </Box>
     </Container>
+ </ThemeProvider>
   );
 };
 
