@@ -69,7 +69,7 @@ const SignUp: React.FC = () => {
     <ThemeProvider theme={theme}>
       <Container maxWidth="xs">
         <Box mt={5} p={3}>
-          <Typography variant="h4" align="left">Sign Up for Boardx!</Typography>
+          <Typography variant="h4" align="left" fontSize="24px">Sign Up for Boardx!</Typography>
           <form onSubmit={handleSignUp}>
             <TextField
               label="Email"
