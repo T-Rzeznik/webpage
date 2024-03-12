@@ -97,12 +97,20 @@ const SignUp: React.FC = () => {
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
+             <Box display="flex" alignItems="center" mb={1}>
+              <Checkbox
+                checked={agreeToTerms}
+                onChange={(e) => setAgreeToTerms(e.target.checked)}
+              />
+              <Typography variant="body2">
+                I agree to Terms of Service and Privacy Policy
+              </Typography>
             <Button variant="contained" fullWidth type="submit">
               Sign Up
             </Button>
           </form>
           <Typography variant="body2" align="center">
-            <Link href="#">Already have an account? Login</Link>
+            <Link href="#">Already have an account? Sign in instead</Link>
           </Typography>
         </Box>
       </Container>
