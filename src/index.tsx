@@ -6,6 +6,7 @@ import {
   RouterProvider,
   Link,
 } from "react-router-dom";
+import LoginPage from "./Login"
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
       <div>
         <h1>Home</h1>
         <Link to="about">Fabricjs</Link>
+        <LoginPage />
       </div>
     ),
   },
