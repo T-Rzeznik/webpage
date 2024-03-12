@@ -4,9 +4,34 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: 'light',
     primary: {
       main: '#ff007f', // Fuchsia pink 
+    },
+  },
+  components: {
+    MuiContainer: {
+      styleOverrides: {
+        root: {
+          border: '2px solid black', // Black border for the container
+        },
+      },
+    },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#f0f0f0', // Grey background for input boxes
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#ff007f', // Fuchsia pink button
+          borderColor: '#ff007f', // Fuchsia pink border for the button
+          color: 'white', // White text color for the button
+        },
+      },
     },
   },
 });
