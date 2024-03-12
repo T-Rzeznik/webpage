@@ -28,7 +28,7 @@ const LoginPage: React.FC = () => {
   return (
 <ThemeProvider theme={theme}>
     <Container maxWidth="xs">
-      <Box mt={5}>
+      <Box mt={5} sx={{ backgroundColor: 'white', padding: '20px' }}>
         <Typography variant="h4" align="center">Login</Typography>
         <form onSubmit={handleLogin}>
           <TextField
