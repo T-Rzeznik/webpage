@@ -105,6 +105,7 @@ const SignUp: React.FC = () => {
               <Typography variant="body2">
                 I agree to Terms of Service and Privacy Policy
               </Typography>
+               </Box>
             <Button variant="contained" fullWidth type="submit">
               Sign Up
             </Button>
