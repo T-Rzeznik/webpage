@@ -106,7 +106,7 @@ const SignUp: React.FC = () => {
                 checked={agreeToTerms}
                 onChange={(e) => setAgreeToTerms(e.target.checked)}
               />
-              <Typography variant="body2">
+              <Typography variant="body2" sx={{ fontSize: '0.8rem' }}>
                 I agree to Terms of Service and Privacy Policy
               </Typography>
                </Box>
