@@ -1,8 +1,9 @@
 
 // SignUp.tsx
 import React, { useState } from 'react';
-import { TextField, Button, Container, Typography, Box, Link, CheckBox } from '@mui/material';
+import { TextField, Button, Container, Typography, Box, Link } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import Checkbox from '@mui/material/Checkbox';
 
 const theme = createTheme({
   palette: {
