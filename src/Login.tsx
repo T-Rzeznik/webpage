@@ -54,7 +54,7 @@ const LoginPage: React.FC = () => {
 <ThemeProvider theme={theme}>
     <Container maxWidth="xs">
       <Box mt={5} sx={{ backgroundColor: 'white', padding: '20px' }}>
-        <Typography variant="h4" align="center">Login</Typography>
+        <Typography variant="h4" align="left">Welcome to Boardx!</Typography>
         <form onSubmit={handleLogin}>
           <TextField
             label="Username"
