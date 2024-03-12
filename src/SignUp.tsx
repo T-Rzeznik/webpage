@@ -5,7 +5,7 @@ import { TextField, Button, Container, Typography, Box, Link } from '@mui/materi
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Checkbox from '@mui/material/Checkbox';
 
-const [agreeToTerms, setAgreeToTerms] = useState(false);
+
 
 const theme = createTheme({
   palette: {
@@ -55,6 +55,7 @@ const SignUp: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [agreeToTerms, setAgreeToTerms] = useState(false);
 
   const handleSignUp = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
