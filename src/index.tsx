@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import LoginPage from "./Login"
 import SignUp from "./SignUp"
+import CreateTeamPage from "./CreatTeam"
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
         
         <div style={{ marginTop: '20px' }}><LoginPage /></div>
         <div style={{ marginTop: '20px' }}><SignUp /></div>
+        <div style={{ marginTop: '20px' }}><CreateTeamPage /></div>
       </div>
     ),
   },
