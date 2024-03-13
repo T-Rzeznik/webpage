@@ -51,8 +51,8 @@ const CreateTeamPage: React.FC = () => {
     <ThemeProvider theme={theme}>
       <Container maxWidth="xs">
         <Box mt={5} sx={{ backgroundColor: 'white', padding: '20px' }}>
-          <Typography variant="h4" align="left" fontSize="24px">Create Team</Typography>
-          <Typography variant="body1" align="left">Get everyone working in one place</Typography>
+          <Typography variant="h4" align="center" fontSize="24px">Create Team</Typography>
+          <Typography variant="body1" align="center">Get everyone working in one place</Typography>
           <form onSubmit={handleCreateTeam}>
             <TextField
               label="Team name"
