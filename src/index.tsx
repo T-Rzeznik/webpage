@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import LoginPage from "./Login"
 import SignUp from "./SignUp"
-import CreateTeamPage from "./CreatTeam"
+import CreateTeamPage from "./CreateTeam"
 
 const router = createBrowserRouter([
   {
