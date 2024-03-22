@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from 'react';
-import { FormControl, Typography, Popover, Paper, Box } from '@mui/material';
+import { FormControl, Typography, Popover, Paper, Box, Slider } from '@mui/material';
 
 // Define your color options
 const colorOptions = [
@@ -25,11 +25,16 @@ const CustomColor: React.FC<CustomColorProps> = ({ onClick }) => {
 
 const ColorPicker: React.FC = () => {
   const [color, setColor] = useState<string>('');
+  const [opacity, setOpacity] = useState<number>(100);
   const [anchorEl, setAnchorEl] = useState<HTMLDivElement | null>(null);
 
   const handleColorChange = (newColor: string) => {
     setColor(newColor);
     setAnchorEl(null);
+  };
+
+  const handleOpacityChange = (event: Event, newValue: number | number[]) => {
+    setOpacity(newValue as number);
   };
 
   const openPopover = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -44,7 +49,7 @@ const ColorPicker: React.FC = () => {
   const id = open ? 'color-picker-popover' : undefined;
 
   return (
-    <div style={{ border: '1px solid black', padding: '8px', display: 'flex', alignItems: 'center' }}>
+    <div style={{ border: '1px solid black', padding: '8px', display: 'flex', flexDirection: 'column' }}>
       <FormControl sx={{ m: 1, minWidth: 120 }}>
         <div onClick={openPopover} role="button" tabIndex={0} style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
           <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: color, border: '1px solid black', marginRight: '8px' }} />
@@ -77,6 +82,15 @@ const ColorPicker: React.FC = () => {
             ))}
           </Box>
           <CustomColor onClick={() => handleColorChange('')} />
+          <Typography variant="h6" style={{ marginTop: '8px' }}>Opacity</Typography>
+          <Slider
+            value={opacity}
+            onChange={handleOpacityChange}
+            aria-label="Opacity"
+            valueLabelDisplay="auto"
+            min={0}
+            max={100}
+          />
         </Paper>
       </Popover>
     </div>
