@@ -16,7 +16,7 @@ interface CustomColorProps {
 
 const CustomColor: React.FC<CustomColorProps> = ({ onClick }) => {
   return (
-    <div style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }} onClick={onClick}>
+    <div style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', marginTop: '8px' }} onClick={onClick}>
       <div style={{ width: '24px', height: '24px', borderRadius: '50%', border: '1px solid black', marginRight: '8px' }} />
       <Typography variant="body1">Custom Color</Typography>
     </div>
@@ -44,7 +44,7 @@ const ColorPicker: React.FC = () => {
   const id = open ? 'color-picker-popover' : undefined;
 
   return (
-    <div style={{ border: '1px solid black', padding: '8px', display: 'flex', alignItems: 'center' }}>
+    <div style={{ border: '1px solid black', padding: '8px', display: 'flex', flexDirection: 'column' }}>
       <FormControl sx={{ m: 1, minWidth: 120 }}>
         <div onClick={openPopover} role="button" tabIndex={0} style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
           <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: color, border: '1px solid black', marginRight: '8px' }} />
@@ -67,7 +67,7 @@ const ColorPicker: React.FC = () => {
       >
         <Paper sx={{ p: 2 }}>
           <Typography variant="h6">Select a Color</Typography>
-          <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
+          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             {colorOptions.map((option, index) => (
               <div
                 key={index}
@@ -75,8 +75,8 @@ const ColorPicker: React.FC = () => {
                 onClick={() => handleColorChange(option)}
               />
             ))}
-            <CustomColor onClick={() => handleColorChange('')} />
           </Box>
+          <CustomColor onClick={() => handleColorChange('')} />
         </Paper>
       </Popover>
     </div>
@@ -84,3 +84,4 @@ const ColorPicker: React.FC = () => {
 };
 
 export default ColorPicker;
+
