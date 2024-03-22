@@ -30,11 +30,17 @@ const ColorPicker: React.FC = () => {
   const open = Boolean(anchorEl);
   const id = open ? 'color-picker-popover' : undefined;
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === 'Enter') {
+      openPopover(event as any); // Type assertion for compatibility
+    }
+  };
+
   return (
     <div>
       <FormControl sx={{ m: 1, minWidth: 120 }}>
         <InputLabel id="color-label">Color</InputLabel>
-        <div onClick={openPopover} role="button" tabIndex={0} onKeyDown={openPopover}>
+        <div onClick={openPopover} role="button" tabIndex={0} onKeyDown={handleKeyDown}>
           <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: color, border: '1px solid black' }} />
         </div>
       </FormControl>
@@ -73,3 +79,4 @@ const ColorPicker: React.FC = () => {
 };
 
 export default ColorPicker;
+
