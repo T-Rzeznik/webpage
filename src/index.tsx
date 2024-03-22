@@ -15,7 +15,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <div>
+       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
         <h1>Home</h1>
         <Link to="about">Fabricjs</Link>
         
