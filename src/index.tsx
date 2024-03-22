@@ -9,6 +9,7 @@ import {
 import LoginPage from "./Login"
 import SignUp from "./SignUp"
 import CreateTeamPage from "./CreateTeam"
+import ColorPicker from "./colorPicker"
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
         <div style={{ marginTop: '20px' }}><LoginPage /></div>
         <div style={{ marginTop: '20px' }}><SignUp /></div>
         <div style={{ marginTop: '20px' }}><CreateTeamPage /></div>
+        <div style={{ marginTop: '20px' }}><ColorPicker /></div>
       </div>
     ),
   },
