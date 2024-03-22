@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from 'react';
 import { Slider, InputLabel, FormControl, Box } from '@mui/material';
 import { SelectChangeEvent, MenuItem, Popover, Paper, Typography } from '@mui/material';
