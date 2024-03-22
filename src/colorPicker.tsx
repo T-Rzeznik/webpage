@@ -4,14 +4,9 @@ import { SelectChangeEvent } from '@mui/material';
 
 const ColorPicker: React.FC = () => {
   const [color, setColor] = useState<string>('');
-  const [opacity, setOpacity] = useState<number>(100);
 
   const handleColorChange = (event: SelectChangeEvent<string>) => {
     setColor(event.target.value);
-  };
-
-  const handleOpacityChange = (event: Event, newValue: number | number[]) => {
-    setOpacity(newValue as number);
   };
 
   return (
@@ -31,17 +26,6 @@ const ColorPicker: React.FC = () => {
           {/* Add other color options */}
         </Select>
       </FormControl>
-      <Box sx={{ width: 200 }}>
-        <FormControl>
-          <InputLabel id="opacity-slider">Opacity</InputLabel>
-          <Slider
-            aria-label="Opacity"
-            defaultValue={100}
-            valueLabelDisplay="auto"
-            onChange={handleOpacityChange}
-          />
-        </FormControl>
-      </Box>
     </div>
   );
 };
