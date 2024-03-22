@@ -12,14 +12,14 @@ const colorOptions = [
 
 const ColorPicker: React.FC = () => {
   const [color, setColor] = useState<string>('');
-  const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(null);
+  const [anchorEl, setAnchorEl] = React.useState<HTMLDivElement | null>(null);
 
   const handleColorChange = (newColor: string) => {
     setColor(newColor);
     setAnchorEl(null);
   };
 
-  const openPopover = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const openPopover = (event: React.MouseEvent<HTMLDivElement>) => {
     setAnchorEl(event.currentTarget);
   };
 
@@ -34,7 +34,7 @@ const ColorPicker: React.FC = () => {
     <div>
       <FormControl sx={{ m: 1, minWidth: 120 }}>
         <InputLabel id="color-label">Color</InputLabel>
-        <div onClick={openPopover}>
+        <div onClick={openPopover} role="button" tabIndex={0} onKeyDown={openPopover}>
           <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: color, border: '1px solid black' }} />
         </div>
       </FormControl>
@@ -60,6 +60,9 @@ const ColorPicker: React.FC = () => {
                 key={index}
                 style={{ width: '32px', height: '32px', borderRadius: '50%', backgroundColor: option, margin: '4px', cursor: 'pointer' }}
                 onClick={() => handleColorChange(option)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={() => handleColorChange(option)}
               />
             ))}
           </Box>
