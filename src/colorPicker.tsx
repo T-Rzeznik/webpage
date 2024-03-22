@@ -38,11 +38,12 @@ const ColorPicker: React.FC = () => {
   };
 
   return (
-    <div>
+    <div style={{ border: '1px solid black', padding: '8px', display: 'flex', alignItems: 'center' }}>
       <FormControl sx={{ m: 1, minWidth: 120 }}>
         <InputLabel id="color-label">Color</InputLabel>
-        <div onClick={openPopover} role="button" tabIndex={0} onKeyDown={handleKeyDown}>
-          <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: color, border: '1px solid black' }} />
+        <div onClick={openPopover} role="button" tabIndex={0} onKeyDown={handleKeyDown} style={{ display: 'flex', alignItems: 'center' }}>
+          <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: color, border: '1px solid black', marginRight: '8px' }} />
+          <span>{color}</span>
         </div>
       </FormControl>
       <Popover
@@ -80,4 +81,3 @@ const ColorPicker: React.FC = () => {
 };
 
 export default ColorPicker;
-
