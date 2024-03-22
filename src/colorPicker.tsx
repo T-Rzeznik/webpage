@@ -1,47 +1,70 @@
 import React, { useState } from 'react';
-import { MenuItem, Select, Slider, InputLabel, FormControl, Box } from '@mui/material';
-import { SelectChangeEvent } from '@mui/material';
+import { Slider, InputLabel, FormControl, Box } from '@mui/material';
+import { SelectChangeEvent, MenuItem, Popover, Paper, Typography } from '@mui/material';
+
+// Define your color options
+const colorOptions = [
+  '#FF0000', // Red
+  '#00FF00', // Green
+  '#0000FF', // Blue
+  // Add more color options as needed
+];
 
 const ColorPicker: React.FC = () => {
   const [color, setColor] = useState<string>('');
-  const [opacity, setOpacity] = useState<number>(100);
+  const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(null);
 
-  const handleColorChange = (event: SelectChangeEvent<string>) => {
-    setColor(event.target.value);
+  const handleColorChange = (newColor: string) => {
+    setColor(newColor);
+    setAnchorEl(null);
   };
 
-  const handleOpacityChange = (event: Event, newValue: number | number[]) => {
-    setOpacity(newValue as number);
+  const openPopover = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
   };
+
+  const closePopover = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+  const id = open ? 'color-picker-popover' : undefined;
 
   return (
     <div>
       <FormControl sx={{ m: 1, minWidth: 120 }}>
         <InputLabel id="color-label">Color</InputLabel>
-        <Select
-          labelId="color-label"
-          id="color-select"
-          value={color}
-          onChange={handleColorChange}
-          label="Color"
-        >
-          <MenuItem value="red">Red</MenuItem>
-          <MenuItem value="blue">Blue</MenuItem>
-          <MenuItem value="green">Green</MenuItem>
-          {/* Add other color options */}
-        </Select>
+        <div onClick={openPopover}>
+          <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: color, border: '1px solid black' }} />
+        </div>
       </FormControl>
-      <Box sx={{ width: 200, opacity: opacity / 100 }}>
-        <FormControl>
-          <InputLabel id="opacity-slider">Opacity</InputLabel>
-          <Slider
-            aria-label="Opacity"
-            defaultValue={100}
-            valueLabelDisplay="auto"
-            onChange={handleOpacityChange}
-          />
-        </FormControl>
-      </Box>
+      <Popover
+        id={id}
+        open={open}
+        anchorEl={anchorEl}
+        onClose={closePopover}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'center',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'center',
+        }}
+      >
+        <Paper sx={{ p: 2 }}>
+          <Typography variant="h6">Select a Color</Typography>
+          <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
+            {colorOptions.map((option, index) => (
+              <div
+                key={index}
+                style={{ width: '32px', height: '32px', borderRadius: '50%', backgroundColor: option, margin: '4px', cursor: 'pointer' }}
+                onClick={() => handleColorChange(option)}
+              />
+            ))}
+          </Box>
+        </Paper>
+      </Popover>
     </div>
   );
 };
