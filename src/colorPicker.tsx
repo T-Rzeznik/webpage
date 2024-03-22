@@ -44,7 +44,7 @@ const ColorPicker: React.FC = () => {
   const id = open ? 'color-picker-popover' : undefined;
 
   return (
-    <div style={{ border: '1px solid black', padding: '8px', display: 'flex', flexDirection: 'column' }}>
+    <div style={{ border: '1px solid black', padding: '8px', display: 'flex', alignItems: 'center' }}>
       <FormControl sx={{ m: 1, minWidth: 120 }}>
         <div onClick={openPopover} role="button" tabIndex={0} style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
           <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: color, border: '1px solid black', marginRight: '8px' }} />
@@ -67,7 +67,7 @@ const ColorPicker: React.FC = () => {
       >
         <Paper sx={{ p: 2 }}>
           <Typography variant="h6">Select a Color</Typography>
-          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+          <Box sx={{ display: 'flex' }}>
             {colorOptions.map((option, index) => (
               <div
                 key={index}
