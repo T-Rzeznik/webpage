@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from 'react';
-import { Slider, InputLabel, FormControl, Box } from '@mui/material';
-import { SelectChangeEvent, MenuItem, Popover, Paper, Typography } from '@mui/material';
+import { FormControl, InputLabel, Popover, Paper, Typography, Box } from '@mui/material';
 
 // Define your color options
 const colorOptions = [
@@ -13,7 +12,7 @@ const colorOptions = [
 
 const ColorPicker: React.FC = () => {
   const [color, setColor] = useState<string>('');
-  const [anchorEl, setAnchorEl] = React.useState<HTMLDivElement | null>(null);
+  const [anchorEl, setAnchorEl] = useState<HTMLDivElement | null>(null);
 
   const handleColorChange = (newColor: string) => {
     setColor(newColor);
@@ -31,19 +30,13 @@ const ColorPicker: React.FC = () => {
   const open = Boolean(anchorEl);
   const id = open ? 'color-picker-popover' : undefined;
 
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
-    if (event.key === 'Enter') {
-      openPopover(event as any); // Type assertion for compatibility
-    }
-  };
-
   return (
     <div style={{ border: '1px solid black', padding: '8px', display: 'flex', alignItems: 'center' }}>
       <FormControl sx={{ m: 1, minWidth: 120 }}>
         <InputLabel id="color-label">Color</InputLabel>
-        <div onClick={openPopover} role="button" tabIndex={0} onKeyDown={handleKeyDown} style={{ display: 'flex', alignItems: 'center' }}>
+        <div onClick={openPopover} role="button" tabIndex={0} onKeyDown={openPopover} style={{ display: 'flex', alignItems: 'center' }}>
           <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: color, border: '1px solid black', marginRight: '8px' }} />
-          <span>{color}</span>
+          <Typography variant="body1">Color</Typography>
         </div>
       </FormControl>
       <Popover
