@@ -31,7 +31,7 @@ const ColorPicker: React.FC = () => {
           {/* Add other color options */}
         </Select>
       </FormControl>
-      <Box sx={{ width: 200 }}>
+      <Box sx={{ width: 200, opacity: opacity / 100 }}>
         <FormControl>
           <InputLabel id="opacity-slider">Opacity</InputLabel>
           <Slider
