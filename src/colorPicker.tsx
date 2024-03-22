@@ -34,7 +34,7 @@ const ColorPicker: React.FC = () => {
     <div style={{ border: '1px solid black', padding: '8px', display: 'flex', alignItems: 'center' }}>
       <FormControl sx={{ m: 1, minWidth: 120 }}>
         <InputLabel id="color-label">Color</InputLabel>
-        <div onClick={openPopover} role="button" tabIndex={0} onKeyDown={openPopover} style={{ display: 'flex', alignItems: 'center' }}>
+        <div onClick={openPopover} role="button" tabIndex={0} style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
           <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: color, border: '1px solid black', marginRight: '8px' }} />
           <Typography variant="body1">Color</Typography>
         </div>
@@ -61,9 +61,6 @@ const ColorPicker: React.FC = () => {
                 key={index}
                 style={{ width: '32px', height: '32px', borderRadius: '50%', backgroundColor: option, margin: '4px', cursor: 'pointer' }}
                 onClick={() => handleColorChange(option)}
-                role="button"
-                tabIndex={0}
-                onKeyDown={() => handleColorChange(option)}
               />
             ))}
           </Box>
