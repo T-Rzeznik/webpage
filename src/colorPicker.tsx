@@ -10,6 +10,19 @@ const colorOptions = [
   // Add more color options as needed
 ];
 
+interface CustomColorProps {
+  onClick: () => void;
+}
+
+const CustomColor: React.FC<CustomColorProps> = ({ onClick }) => {
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }} onClick={onClick}>
+      <div style={{ width: '24px', height: '24px', borderRadius: '50%', border: '1px solid black', marginRight: '8px' }} />
+      <Typography variant="body1">Custom Color</Typography>
+    </div>
+  );
+};
+
 const ColorPicker: React.FC = () => {
   const [color, setColor] = useState<string>('');
   const [anchorEl, setAnchorEl] = useState<HTMLDivElement | null>(null);
@@ -62,6 +75,7 @@ const ColorPicker: React.FC = () => {
                 onClick={() => handleColorChange(option)}
               />
             ))}
+            <CustomColor onClick={() => handleColorChange('')} />
           </Box>
         </Paper>
       </Popover>
