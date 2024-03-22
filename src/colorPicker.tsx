@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { MenuItem, Select, Slider, InputLabel, FormControl, Box } from '@mui/material';
+import { SelectChangeEvent } from '@mui/material';
 
 const ColorPicker: React.FC = () => {
   const [color, setColor] = useState<string>('');
   const [opacity, setOpacity] = useState<number>(100);
 
-  const handleColorChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    setColor(event.target.value as string);
+  const handleColorChange = (event: SelectChangeEvent<string>) => {
+    setColor(event.target.value);
   };
 
   const handleOpacityChange = (event: Event, newValue: number | number[]) => {
