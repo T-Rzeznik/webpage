@@ -1,14 +1,14 @@
 .top-bar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   background-color: #f0f0f0;
   padding: 10px 20px;
-  width: 80%; /* Set the width to 80% of the screen */
-  margin: 0 auto; /* Center the component horizontally */
 }
 
 .left-section {
-  flex: 1; /* Occupy all available space in the left section */
+  display: flex;
+  align-items: center;
 }
 
 .right-section {
@@ -58,4 +58,10 @@
   padding: 5px 10px;
   border-radius: 20px;
   cursor: pointer;
+}
+
+/* Wrapper for the top bar to span 80% of the screen */
+.top-bar-wrapper {
+  width: 80%;
+  margin: 0 auto;
 }
