@@ -8,7 +8,7 @@ import SignUp from './SignUp';
 import CreateTeamPage from './CreateTeam';
 import ColorPicker from './colorPicker';
 import TopBar from './TopBar'; 
-import LargeRectangle from './LargeRectangle.tsx'; 
+import LargeRectangle from './LargeRectangle'; 
 
 
 
