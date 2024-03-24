@@ -1,0 +1,33 @@
+.large-rectangle {
+  width: 300px; /* Adjust width as needed */
+  height: 300px; /* Adjust height as needed */
+  background-color: #ffffff; /* White color for top */
+  border: 1px solid black; /* Border around the component */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  height: 70%;
+}
+
+.bottom {
+  height: 30%;
+  background-color: #000000; /* Black color for bottom */
+  padding: 10px; /* Add padding for text */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: #ffffff; /* White color for title text */
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.description {
+  color: #ffffff; /* White color for description text */
+  font-size: 14px;
+}
