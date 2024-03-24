@@ -26,3 +26,10 @@ body, html {
   min-height: 100%; /* Ensure #root fills the height of its parent */
   padding: 20px; /* Add padding to #root */
 }
+
+/* Adjust the padding of #root to accommodate the TopBar component */
+@media (min-width: 768px) {
+  #root {
+    padding: 20px 0; /* Remove horizontal padding */
+  }
+}
