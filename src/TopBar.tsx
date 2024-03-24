@@ -11,6 +11,7 @@ const TopBar: React.FC = () => {
   };
 
   return (
+<div className="top-bar-wrapper">
     <div className="top-bar">
       <div className="left-section">
         <div className="dropdown" onClick={toggleDropdown}>
@@ -29,6 +30,8 @@ const TopBar: React.FC = () => {
         </div>
       </div>
     </div>
+  </div>
+</div>
   );
 };
 
