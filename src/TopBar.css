@@ -4,18 +4,6 @@
   align-items: center;
   background-color: #f0f0f0;
   padding: 10px 20px;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.left-section {
-  display: flex;
-  align-items: center;
-}
-
-.right-section {
-  display: flex;
-  align-items: center;
 }
 
 .dropdown {
@@ -61,4 +49,3 @@
   border-radius: 20px;
   cursor: pointer;
 }
-
