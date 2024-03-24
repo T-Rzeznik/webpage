@@ -1,14 +1,12 @@
+// TopBar.tsx
 import React from 'react';
-import ButtonDropdownMenu from './ButtonDropdownMenu';
-import SearchBar from './SearchBar';
-import ProfileAvatar from './ProfileAvatar';
 
 const TopBar: React.FC = () => {
   return (
     <div className="top-bar">
-      <ButtonDropdownMenu />
-      <SearchBar />
-      <ProfileAvatar />
+      <button className="dropdown-button">Menu ▼</button>
+      <input type="text" placeholder="Search..." className="search-bar" />
+      <div className="profile-avatar">Profile</div>
     </div>
   );
 };
