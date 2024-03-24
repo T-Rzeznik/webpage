@@ -26,4 +26,5 @@ body, html {
   justify-content: space-between;
   padding-top: 20px; /* Adjust as needed */
   padding-bottom: 20px; /* Adjust as needed */
+   height: auto;
 }
