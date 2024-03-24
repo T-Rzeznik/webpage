@@ -1,10 +1,11 @@
 import React from 'react';
+import './MainInterface.css';
 import TopBar from './TopBar';
 import LargeRectangle from './LargeRectangle';
 
-const MainInterface = () => {
+const MainInterface: React.FC = () => {
   return (
-    <div>
+    <div className="main-interface">
       <TopBar />
       <div className="rectangle-container">
         <LargeRectangle title="Title 1" description="Description 1" />
