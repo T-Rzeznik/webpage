@@ -30,7 +30,7 @@ const router = createBrowserRouter([
           <TopBar />
         </div>
          <div style={{ marginTop: '20px' }}>
-          <LargeRectangle />
+         <LargeRectangle title="Day 1" description="edited 03/27" />
         </div>
          
         <div style={{ marginTop: '20px' }}><CreateTeamPage /></div>
