@@ -4,6 +4,8 @@
   align-items: center;
   background-color: #f0f0f0;
   padding: 10px 20px;
+  width: 80%; /* Set the width to 80% of the screen */
+  margin: 0 auto; /* Center the component horizontally */
 }
 
 .left-section {
@@ -16,6 +18,7 @@
   align-items: center;
 }
 
+/* Styles for dropdown menu */
 .dropdown {
   position: relative;
 }
@@ -44,6 +47,7 @@
   display: block;
 }
 
+/* Styles for search bar and profile avatar */
 .search-profile {
   display: flex;
   align-items: center;
@@ -60,8 +64,3 @@
   cursor: pointer;
 }
 
-/* Wrapper for the top bar to span 80% of the screen */
-.top-bar-wrapper {
-  width: 80%;
-  margin: 0 auto;
-}
