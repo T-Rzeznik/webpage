@@ -20,13 +20,15 @@ const router = createBrowserRouter([
         <h1>Home</h1>
         <Link to="about">Fabricjs</Link>
         
-        <div style={{ marginTop: '20px' }}>
-          <TopBar />
-          
-        </div>
+       
   
         <div style={{ marginTop: '20px' }}><LoginPage /></div>
         <div style={{ marginTop: '20px' }}><SignUp /></div>
+         
+         <div style={{ marginTop: '20px' }}>
+          <TopBar />
+        </div>
+         
         <div style={{ marginTop: '20px' }}><CreateTeamPage /></div>
         <div style={{ marginTop: '20px' }}><ColorPicker /></div>
       </div>
