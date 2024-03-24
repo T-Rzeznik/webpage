@@ -7,6 +7,8 @@ import LoginPage from './Login';
 import SignUp from './SignUp';
 import CreateTeamPage from './CreateTeam';
 import ColorPicker from './colorPicker';
+import TopBar from './TopBar'; 
+import MainSection from './MainSection'; 
 
 
 // Function to render the React app
@@ -18,6 +20,11 @@ const router = createBrowserRouter([
         <h1>Home</h1>
         <Link to="about">Fabricjs</Link>
         
+        <div style={{ marginTop: '20px' }}>
+          <TopBar />
+          <MainSection/>
+        </div>
+  
         <div style={{ marginTop: '20px' }}><LoginPage /></div>
         <div style={{ marginTop: '20px' }}><SignUp /></div>
         <div style={{ marginTop: '20px' }}><CreateTeamPage /></div>
