@@ -1,4 +1,5 @@
 import React from 'react';
+import './LargeRectangle.css';
 
 interface LargeRectangleProps {
   title: string;
