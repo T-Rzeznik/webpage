@@ -12,17 +12,21 @@ const TopBar: React.FC = () => {
 
   return (
     <div className="top-bar">
-      <div className="dropdown" onClick={toggleDropdown}>
-        <button className="dropdown-button">SoTeaching ▼</button>
-        <div className={`dropdown-content ${isDropdownOpen ? 'show' : ''}`}>
-          <a href="#">SOteaching</a>
-          <a href="#">Switch Team</a>
-          <a href="#">Create Team</a>
+      <div className="left-section">
+        <div className="dropdown" onClick={toggleDropdown}>
+          <button className="dropdown-button">SoTeaching ▼</button>
+          <div className={`dropdown-content ${isDropdownOpen ? 'show' : ''}`}>
+            <a href="#">SOteaching</a>
+            <a href="#">Switch Team</a>
+            <a href="#">Create Team</a>
+          </div>
         </div>
       </div>
-      <div className="search-profile">
-        <input type="text" placeholder="Search..." className="search-bar" />
-        <div className="profile-avatar">Profile</div>
+      <div className="right-section">
+        <div className="search-profile">
+          <input type="text" placeholder="Search..." className="search-bar" />
+          <div className="profile-avatar">Profile</div>
+        </div>
       </div>
     </div>
   );
