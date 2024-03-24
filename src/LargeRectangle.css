@@ -1,8 +1,10 @@
+
 .large-rectangle {
   width: 300px; /* Adjust width as needed */
-  height: 300px; /* Adjust height as needed */
+  height: 270px; /* Adjust height as needed */
   background-color: #ffffff; /* White color for top */
   border: 1px solid black; /* Border around the component */
+  border-radius: 10px; /* Rounded edges */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -10,15 +12,19 @@
 
 .top {
   height: 70%;
+  border-top-left-radius: 10px; /* Rounded top-left corner */
+  border-top-right-radius: 10px; /* Rounded top-right corner */
 }
 
 .bottom {
   height: 30%;
   background-color: #000000; /* Black color for bottom */
-  padding: 10px; /* Add padding for text */
+  padding: 8px; /* Adjust padding to fit text better */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  border-bottom-left-radius: 10px; /* Rounded bottom-left corner */
+  border-bottom-right-radius: 10px; /* Rounded bottom-right corner */
 }
 
 .title {
