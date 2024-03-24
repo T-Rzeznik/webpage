@@ -4,7 +4,7 @@
   align-items: center;
   background-color: #f0f0f0;
   padding: 10px 20px;
-  width: 80%; /* Set the width to 80% of the screen */
+  width: 80vw; /* Set the width to 80% of the viewport width */
   margin: 0 auto; /* Center the component horizontally */
 }
 
@@ -63,4 +63,5 @@
   border-radius: 20px;
   cursor: pointer;
 }
+
 
