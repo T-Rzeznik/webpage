@@ -14,7 +14,7 @@ code {
 body, html {
   margin: 0;
   padding: 0;
-  min-height: 100vh; /* Ensure both body and html cover the full viewport height */
+  min-height: 100%; /* Ensure both body and html cover the full viewport height */
 }
 
 
