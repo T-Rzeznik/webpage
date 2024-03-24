@@ -15,9 +15,9 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: (
-       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '50px' }}>
         <h1>Home</h1>
-        <Link to="about">Fabricjs</Link>
+        <Link to="/about">Fabricjs</Link>
         
         <div style={{ marginTop: '20px' }}><LoginPage /></div>
         <div style={{ marginTop: '20px' }}><SignUp /></div>
@@ -27,11 +27,11 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "about",
+    path: "/about",
     element: <Fabricjs />
   },
 ]);
 
-createRoot(document.getElementById("root") as any).render(
+createRoot(document.getElementById("root")).render(
   <RouterProvider router={router} />
 );
