@@ -7,8 +7,7 @@ import LoginPage from './Login';
 import SignUp from './SignUp';
 import CreateTeamPage from './CreateTeam';
 import ColorPicker from './colorPicker';
-import TopBar from './TopBar'; // New component
-import MainSection from './MainSection'; // New component
+
 
 // Function to render the React app
 const router = createBrowserRouter([
