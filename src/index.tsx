@@ -11,52 +11,27 @@ import TopBar from './TopBar'; // New component
 import MainSection from './MainSection'; // New component
 
 // Function to render the React app
-const renderApp = () => {
-  const router = createBrowserRouter([
-    {
-      path: '/',
-      element: (
-        <div>
-          <TopBar />
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-              minHeight: 'calc(100vh - 100px)', // Adjust for the height of TopBar
-            }}
-          >
-            <h1>Home</h1>
-            <Link to="about">Fabricjs</Link>
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
+        <h1>Home</h1>
+        <Link to="about">Fabricjs</Link>
+        
+        <div style={{ marginTop: '20px' }}><LoginPage /></div>
+        <div style={{ marginTop: '20px' }}><SignUp /></div>
+        <div style={{ marginTop: '20px' }}><CreateTeamPage /></div>
+        <div style={{ marginTop: '20px' }}><ColorPicker /></div>
+      </div>
+    ),
+  },
+  {
+    path: "about",
+    element: <Fabricjs />
+  },
+]);
 
-            <div style={{ marginTop: '20px' }}>
-              <LoginPage />
-            </div>
-            <div style={{ marginTop: '20px' }}>
-              <SignUp />
-            </div>
-            <div style={{ marginTop: '20px' }}>
-              <CreateTeamPage />
-            </div>
-            <div style={{ marginTop: '20px' }}>
-              <ColorPicker />
-            </div>
-            <MainSection />
-          </div>
-        </div>
-      ),
-    },
-    {
-      path: 'about',
-      element: <Fabricjs />,
-    },
-  ]);
-
-  createRoot(document.getElementById('root')).render(
-    <RouterProvider router={router} />
-  );
-};
-
-// Render the app when the DOM content is loaded
-document.addEventListener('DOMContentLoaded', renderApp);
+createRoot(document.getElementById("root") as any).render(
+  <RouterProvider router={router} />
+);
