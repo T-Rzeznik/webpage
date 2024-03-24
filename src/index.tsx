@@ -9,6 +9,8 @@ import CreateTeamPage from './CreateTeam';
 import ColorPicker from './colorPicker';
 import TopBar from './TopBar'; 
 import LargeRectangle from './LargeRectangle'; 
+import MainInterface from './MainInterface';
+
 
 
 
@@ -33,6 +35,10 @@ const router = createBrowserRouter([
          <LargeRectangle title="Day 1" description="edited 03/27" />
         </div>
          
+        <div style={{ marginTop: '20px' }}>
+        <MainInterface /> 
+        </div>
+        
         <div style={{ marginTop: '20px' }}><CreateTeamPage /></div>
         <div style={{ marginTop: '20px' }}><ColorPicker /></div>
       </div>
