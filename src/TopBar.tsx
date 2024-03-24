@@ -31,7 +31,6 @@ const TopBar: React.FC = () => {
       </div>
     </div>
   </div>
-</div>
   );
 };
 
