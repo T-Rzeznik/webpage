@@ -2,6 +2,12 @@
 .main-interface {
   width: 80%; /* Span 80% of the screen horizontally */
   margin: 0 auto; /* Center the component horizontally */
+  border: 1px solid black; /* Border around the whole component */
+  padding: 20px; /* Add some padding for better visualization */
+}
+
+.main-title {
+  text-align: left; /* Center the title */
 }
 
 .rectangle-container {
