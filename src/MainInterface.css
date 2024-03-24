@@ -1,0 +1,15 @@
+.main-interface {
+  border: 1px solid #000; /* Border around the entire component */
+  width: 80vw; /* Set the width to 80% of the viewport width */
+  margin: 0 auto; /* Center the component horizontally */
+}
+
+.all-boards {
+  text-align: right; /* Align Allboards text to the right */
+}
+
+.rectangle-container {
+  display: flex;
+  flex-wrap: wrap; /* Wrap LargeRectangle components when they reach the container's width */
+  gap: 10px; /* Add gap between LargeRectangle components */
+}
