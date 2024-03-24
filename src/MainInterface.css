@@ -2,6 +2,8 @@
   border: 1px solid #000; /* Border around the entire component */
   width: 80vw; /* Set the width to 80% of the viewport width */
   margin: 0 auto; /* Center the component horizontally */
+  display: flex; /* Use flex layout */
+  flex-direction: column; /* Arrange children in a column */
 }
 
 .all-boards {
