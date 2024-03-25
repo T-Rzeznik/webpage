@@ -29,15 +29,6 @@ const router = createBrowserRouter([
         <div style={{ marginTop: '20px' }}><LoginPage /></div>
         <div style={{ marginTop: '20px' }}><SignUp /></div>
          
-         
-         <div style={{ marginTop: '20px' }}>
-         <LargeRectangle title="Day 1" description="edited 03/27" />
-        </div>
-         
-        <div style={{ marginTop: '20px' }}>
-          <TopBar />
-        </div>
-      
        <div style={{ marginTop: '20px' }}>
         <MainInterface/>
       </div>
