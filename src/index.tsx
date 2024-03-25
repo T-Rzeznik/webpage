@@ -7,8 +7,6 @@ import LoginPage from './Login';
 import SignUp from './SignUp';
 import CreateTeamPage from './CreateTeam';
 import ColorPicker from './colorPicker';
-import TopBar from './TopBar'; 
-import LargeRectangle from './LargeRectangle'; 
 import MainInterface from './MainInterface';
 
 
