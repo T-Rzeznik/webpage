@@ -8,6 +8,7 @@
 
 .all-boards {
   text-align: left;
+  margin-left: 10px; /* Add margin to the bottom */
 }
 
 .rectangle-container {
