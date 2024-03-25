@@ -23,8 +23,8 @@ body, html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100%; /* Ensure #root fills the height of its parent */
   padding: 20px; /* Add padding to #root */
+  height: 100vh;
 }
 
 /* Adjust the padding of #root to accommodate the TopBar component */
