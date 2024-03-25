@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 import React, { useState } from 'react';
-import './TopBar.css'; // Import the CSS file
+import './TopBar.css';
 
 const TopBar: React.FC = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
