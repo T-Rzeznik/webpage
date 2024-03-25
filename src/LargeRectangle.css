@@ -1,0 +1,46 @@
+.large-rectangle {
+  width: 300px; /* Adjust width as needed */
+  height: 200px; /* Adjust height as needed (smaller) */
+  background-color: #ffffff; /* White color for top */
+  border: 1px solid black; /* Border around the component */
+  border-radius: 10px; /* Rounded edges */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Vertically space the top and bottom sections */
+  cursor: pointer;
+}
+
+.large-rectangle:hover {
+  background-color: #f0f0f0; /* Light gray background on hover */
+}
+
+.top {
+  height: 60%; /* Adjusted height for top */
+  border-top-left-radius: 10px; /* Rounded top-left corner */
+  border-top-right-radius: 10px; /* Rounded top-right corner */
+}
+
+.bottom {
+  height: 32%; /* Adjusted height for bottom (smaller) */
+  background-color: #000000; /* Black color for bottom */
+  padding: 8px; /* Adjust padding to fit text better */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: flex-start; /* Align text to the left */
+  border-bottom-left-radius: 10px; /* Rounded bottom-left corner */
+  border-bottom-right-radius: 10px; /* Rounded bottom-right corner */
+}
+
+.title {
+  color: #ffffff; /* White color for title text */
+  font-weight: bold;
+  font-size: 16px; /* Adjusted font size for title */
+}
+
+.description {
+  color: #ffffff; /* White color for description text */
+  font-size: 12px; /* Adjusted font size for description */
+}
