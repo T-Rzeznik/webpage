@@ -16,7 +16,6 @@
   align-items: center;
 }
 
-/* Styles for dropdown menu */
 .dropdown {
   position: relative;
 }
@@ -45,7 +44,6 @@
   display: block;
 }
 
-/* Styles for search bar and profile avatar */
 .search-profile {
   display: flex;
   align-items: center;
