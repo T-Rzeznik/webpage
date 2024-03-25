@@ -1,46 +1,46 @@
 .large-rectangle {
-  width: 300px; /* Adjust width as needed */
-  height: 200px; /* Adjust height as needed (smaller) */
-  background-color: #ffffff; /* White color for top */
-  border: 1px solid black; /* Border around the component */
-  border-radius: 10px; /* Rounded edges */
+  width: 300px; 
+  height: 200px;
+  background-color: #ffffff; 
+  border: 1px solid black; 
+  border-radius: 10px; 
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Vertically space the top and bottom sections */
+  justify-content: space-between; 
   cursor: pointer;
 }
 
 .large-rectangle:hover {
-  background-color: #f0f0f0; /* Light gray background on hover */
+  background-color: #f0f0f0; 
 }
 
 .top {
-  height: 60%; /* Adjusted height for top */
-  border-top-left-radius: 10px; /* Rounded top-left corner */
-  border-top-right-radius: 10px; /* Rounded top-right corner */
+  height: 60%; 
+  border-top-left-radius: 10px; 
+  border-top-right-radius: 10px; 
 }
 
 .bottom {
-  height: 32%; /* Adjusted height for bottom (smaller) */
-  background-color: #000000; /* Black color for bottom */
-  padding: 8px; /* Adjust padding to fit text better */
+  height: 32%; 
+  background-color: #000000; 
+  padding: 8px; 
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center vertically */
-  align-items: flex-start; /* Align text to the left */
-  border-bottom-left-radius: 10px; /* Rounded bottom-left corner */
-  border-bottom-right-radius: 10px; /* Rounded bottom-right corner */
+  justify-content: center; 
+  align-items: flex-start; 
+  border-bottom-left-radius: 10px; 
+  border-bottom-right-radius: 10px; 
 }
 
 .title {
-  color: #ffffff; /* White color for title text */
+  color: #ffffff; 
   font-weight: bold;
-  font-size: 16px; /* Adjusted font size for title */
+  font-size: 16px; 
 }
 
 .description {
-  color: #ffffff; /* White color for description text */
-  font-size: 12px; /* Adjusted font size for description */
+  color: #ffffff; 
+  font-size: 12px; 
 }
