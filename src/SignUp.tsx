@@ -41,10 +41,10 @@ const theme = createTheme({
     MuiTypography: {
       styleOverrides: {
         h4: {
-          fontSize: '2rem', // Change font size for h4 to 2rem
+          fontSize: '2rem', 
         },
         body2: {
-          fontSize: '1rem', // Change font size for body2 to 1rem
+          fontSize: '1rem', 
         },
       },
     },
