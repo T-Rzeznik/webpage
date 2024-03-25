@@ -10,10 +10,6 @@ import ColorPicker from './colorPicker';
 import MainInterface from './MainInterface';
 
 
-
-
-
-// Function to render the React app
 const router = createBrowserRouter([
   {
     path: "/",
