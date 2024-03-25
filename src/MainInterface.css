@@ -14,7 +14,6 @@
   flex: 1; /* Expand to fill remaining space */
   display: flex;
   flex-wrap: wrap; /* Wrap LargeRectangle components when they reach the container's width */
-  justify-content: space-around; /* Distribute items evenly along the main axis */
-  align-items: center; /* Center items along the cross axis */
+  justify-content: space-between; /* Distribute items evenly along the main axis with space between */
   gap: 10px; /* Add gap between LargeRectangle components */
 }
