@@ -29,7 +29,7 @@ const theme = createTheme({
         root: {
           backgroundColor: '#ff007f', // Fuchsia pink button
           borderColor: '#ff007f', // Fuchsia pink border for the button
-          color: 'white', // White text color for the button
+          color: 'white', 
         },
       },
     },
