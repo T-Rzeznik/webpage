@@ -11,7 +11,7 @@ const MainInterface: React.FC = () => {
       <TopBar />
 
       {/* Render Allboards H1 aligned right */}
-      <h1 className="all-boards">Allboards</h1>
+      <h1 className="all-boards">All Boards</h1>
 
       {/* Parent container for LargeRectangle components */}
       <div className="rectangle-container">
