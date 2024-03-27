@@ -1,31 +1,22 @@
-// MainInterface2.tsx
-
-import React, { useState } from 'react';
+import React from 'react';
 import { AppBar, Toolbar, Typography, InputBase, IconButton, Avatar, Menu, MenuItem, Box, Grid, Paper } from '@mui/material';
 import { Menu as MenuIcon, Search as SearchIcon } from '@mui/icons-material';
 
 const MainInterface2: React.FC = () => {
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-
-  const handleMenuOpen = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget);
+  const renderBoards = () => {
+    const boards = [];
+    for (let index = 0; index < 9; index++) {
+      boards.push(
+        <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+          <Paper sx={{ p: 2 }}>
+            <Typography variant="h6" sx={{ mb: 1 }}>Board {index + 1}</Typography>
+            <Typography variant="body1" sx={{ color: 'text.secondary' }}>Description {index + 1}</Typography>
+          </Paper>
+        </Grid>
+      );
+    }
+    return boards;
   };
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-  };
-
-  const renderMenu = (
-    <Menu
-      anchorEl={anchorEl}
-      open={Boolean(anchorEl)}
-      onClose={handleMenuClose}
-    >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
-    </Menu>
-  );
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -60,7 +51,7 @@ const MainInterface2: React.FC = () => {
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
-              onClick={handleMenuOpen}
+              // onClick={handleMenuOpen}
               color="inherit"
             >
               <Avatar sx={{ bgcolor: 'primary.main' }}>P</Avatar>
@@ -68,17 +59,10 @@ const MainInterface2: React.FC = () => {
           </Box>
         </Toolbar>
       </AppBar>
-      {renderMenu}
+      {/* {renderMenu} */}
       <Typography variant="h4" sx={{ mt: 2, ml: 2 }}>All Boards</Typography>
       <Grid container spacing={2} sx={{ p: 2 }}>
-        {[...Array(9).keys()].map((index) => (
-          <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
-            <Paper sx={{ p: 2 }}>
-              <Typography variant="h6" sx={{ mb: 1 }}>Board {index + 1}</Typography>
-              <Typography variant="body1" sx={{ color: 'text.secondary' }}>Description {index + 1}</Typography>
-            </Paper>
-          </Grid>
-        ))}
+        {renderBoards()}
       </Grid>
     </Box>
   );
