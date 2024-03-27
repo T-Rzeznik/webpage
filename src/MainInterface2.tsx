@@ -13,6 +13,21 @@ const MainInterface2: React.FC = () => {
     setAnchorEl(null);
   };
 
+  const renderBoards = () => {
+    const boards = [];
+    for (let index = 0; index < 9; index++) {
+      boards.push(
+        <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+          <Paper sx={{ p: 2 }}>
+            <Typography variant="h6" sx={{ mb: 1 }}>Board {index + 1}</Typography>
+            <Typography variant="body1" sx={{ color: 'text.secondary' }}>Description {index + 1}</Typography>
+          </Paper>
+        </Grid>
+      );
+    }
+    return boards;
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{ bgcolor: 'grey.200' }}>
