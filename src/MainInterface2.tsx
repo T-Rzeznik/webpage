@@ -3,6 +3,7 @@ import { AppBar, Toolbar, Typography, InputBase, IconButton, Avatar, Box, Grid, 
 import { Menu as MenuIcon, Search as SearchIcon } from '@mui/icons-material';
 
 const MainInterface2: React.FC = () => {
+// eslint-disable-next-line
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
   const handleMenuClick = (event: React.MouseEvent<HTMLButtonElement>) => {
