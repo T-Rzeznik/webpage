@@ -1,11 +1,11 @@
 import React from 'react';
-import { PageContainer } from 'joy-ui';
+import { MainInterface as MuiMainInterface } from '@mui/joy';
 import TopBar from './TopBar';
 import LargeRectangle from './LargeRectangle';
 
 const MainInterface2: React.FC = () => {
   return (
-    <PageContainer>
+    <MuiMainInterface>
       <TopBar />
       <h1 className="all-boards">All Boards</h1>
       <div className="rectangle-container">
@@ -19,7 +19,7 @@ const MainInterface2: React.FC = () => {
         <LargeRectangle title="Board 8" description="Description 8" />
         <LargeRectangle title="Board 9" description="Description 9" />
       </div>
-    </PageContainer>
+    </MuiMainInterface>
   );
 };
 
