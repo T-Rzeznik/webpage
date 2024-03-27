@@ -20,9 +20,9 @@ const MainInterface2: React.FC = () => {
         <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
           <ButtonBase component={Paper} sx={{ p: 2, border: 1, borderColor: 'grey.700', borderRadius: 1, height: '150px', position: 'relative', width: '100%' }} onClick={() => handleClick(index)}>
             <Box sx={{ position: 'absolute', width: '100%', height: '70%', bgcolor: 'white', top: 0, left: 0 }} />
-            <Box sx={{ position: 'absolute', width: '100%', height: '30%', bgcolor: 'grey.700', bottom: 0, left: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '8px' }}>
-              <Typography variant="h6" sx={{ color: 'white', textAlign: 'left', overflowWrap: 'anywhere' }}>Board {index + 1}</Typography>
-              <Typography variant="body1" sx={{ color: 'white', textAlign: 'left', overflowWrap: 'anywhere' }}>Description {index + 1}</Typography>
+            <Box sx={{ position: 'absolute', width: '100%', height: '30%', bgcolor: 'grey.700', bottom: 0, left: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+              <Typography variant="h6" sx={{ mb: 1, color: 'white', textAlign: 'left', paddingLeft: '8px' }}>Board {index + 1}</Typography>
+              <Typography variant="body1" sx={{ color: 'white', textAlign: 'left', paddingLeft: '8px' }}>Description {index + 1}</Typography>
             </Box>
           </ButtonBase>
         </Grid>
