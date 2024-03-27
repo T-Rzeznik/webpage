@@ -1,5 +1,5 @@
 import React from 'react';
-import { Rectangle } from 'joy-ui';
+import { LargeRectangle as MuiLargeRectangle } from '@mui/joy';
 
 interface LargeRectangleProps {
   title: string;
@@ -8,11 +8,7 @@ interface LargeRectangleProps {
 
 const LargeRectangle: React.FC<LargeRectangleProps> = ({ title, description }) => {
   return (
-    <Rectangle
-      title={title}
-      description={description}
-      style={{ width: 300, height: 200 }}
-    />
+    <MuiLargeRectangle title={title} description={description} />
   );
 };
 
