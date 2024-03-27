@@ -30,7 +30,7 @@ const MainInterface2: React.FC = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ bgcolor: 'grey.200' }}>
+      <AppBar position="static" sx={{ bgcolor: 'grey.700' }}>
         <Toolbar>
           <Typography variant="h6" noWrap sx={{ flexGrow: 1 }}>
             SoTeaching
@@ -42,6 +42,7 @@ const MainInterface2: React.FC = () => {
             aria-haspopup="true"
             onClick={handleMenuClick}
             color="inherit"
+            sx={{ marginRight: 2 }}
           >
             <MenuIcon />
           </IconButton>
@@ -50,6 +51,14 @@ const MainInterface2: React.FC = () => {
             anchorEl={anchorEl}
             open={Boolean(anchorEl)}
             onClose={handleMenuClose}
+            anchorOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
           >
             <MenuItem onClick={handleMenuClose}>SoTeaching</MenuItem>
             <MenuItem onClick={handleMenuClose}>Switch Team</MenuItem>
@@ -89,4 +98,3 @@ const MainInterface2: React.FC = () => {
 };
 
 export default MainInterface2;
-
