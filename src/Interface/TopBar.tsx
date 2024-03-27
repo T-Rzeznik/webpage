@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavBar, Dropdown, Input, Avatar } from 'joy-ui';
+import { TopBar as MuiTopBar, Dropdown } from '@mui/joy';
 
 const TopBar: React.FC = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -9,25 +9,25 @@ const TopBar: React.FC = () => {
   };
 
   return (
-    <NavBar>
+    <MuiTopBar>
       <div className="left-section">
         <Dropdown
-          trigger={<button className="dropdown-button">SoTeaching ▼</button>}
-          visible={isDropdownOpen}
-          onVisibleChange={toggleDropdown}
+          buttonText="SoTeaching ▼"
+          isOpen={isDropdownOpen}
+          toggleDropdown={toggleDropdown}
         >
-          <Dropdown.Item>SOteaching</Dropdown.Item>
-          <Dropdown.Item>Switch Team</Dropdown.Item>
-          <Dropdown.Item>Create Team</Dropdown.Item>
+          <a href="#">SOteaching</a>
+          <a href="#">Switch Team</a>
+          <a href="#">Create Team</a>
         </Dropdown>
       </div>
       <div className="right-section">
         <div className="search-profile">
-          <Input placeholder="Search..." className="search-bar" />
-          <Avatar>Profile</Avatar>
+          <input type="text" placeholder="Search..." className="search-bar" />
+          <div className="profile-avatar">Profile</div>
         </div>
       </div>
-    </NavBar>
+    </MuiTopBar>
   );
 };
 
