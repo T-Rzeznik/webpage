@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AppBar, Toolbar, Typography, InputBase, IconButton, Avatar, Box, Grid, Paper, Menu, MenuItem } from '@mui/material';
+import { AppBar, Toolbar, Typography, InputBase, IconButton, Avatar, Box, Grid, Paper, MenuItem } from '@mui/material';
 import { Menu as MenuIcon, Search as SearchIcon } from '@mui/icons-material';
 
 const MainInterface2: React.FC = () => {
@@ -46,24 +46,29 @@ const MainInterface2: React.FC = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Menu
-            id="menu-appbar"
-            anchorEl={anchorEl}
-            open={Boolean(anchorEl)}
-            onClose={handleMenuClose}
-            anchorOrigin={{
-              vertical: 'top',
-              horizontal: 'right',
-            }}
-            transformOrigin={{
-              vertical: 'top',
-              horizontal: 'right',
-            }}
-          >
-            <MenuItem onClick={handleMenuClose}>SoTeaching</MenuItem>
-            <MenuItem onClick={handleMenuClose}>Switch Team</MenuItem>
-            <MenuItem onClick={handleMenuClose}>Create Team</MenuItem>
-          </Menu>
+          <Box sx={{ position: 'relative' }}>
+            <IconButton
+              size="large"
+              aria-label="open dropdown"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleMenuClick}
+              color="inherit"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Box
+              sx={{
+                position: 'absolute',
+                top: '100%',
+                right: 0,
+              }}
+            >
+              <MenuItem onClick={handleMenuClose}>SoTeaching</MenuItem>
+              <MenuItem onClick={handleMenuClose}>Switch Team</MenuItem>
+              <MenuItem onClick={handleMenuClose}>Create Team</MenuItem>
+            </Box>
+          </Box>
           <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center' }}>
             <Paper component="form" sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}>
               <IconButton sx={{ p: '10px' }} aria-label="search">
@@ -98,3 +103,4 @@ const MainInterface2: React.FC = () => {
 };
 
 export default MainInterface2;
+
