@@ -1,6 +1,5 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { AppBar, Toolbar, Typography, InputBase, IconButton, Avatar, Menu, MenuItem, Box, Grid, Paper } from '@mui/material';
+import { AppBar, Toolbar, Typography, InputBase, IconButton, Avatar, Box, Grid, Paper } from '@mui/material';
 import { Menu as MenuIcon, Search as SearchIcon } from '@mui/icons-material';
 
 const MainInterface2: React.FC = () => {
@@ -70,3 +69,4 @@ const MainInterface2: React.FC = () => {
 };
 
 export default MainInterface2;
+
