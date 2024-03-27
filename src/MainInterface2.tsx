@@ -21,8 +21,8 @@ const MainInterface2: React.FC = () => {
           <Paper sx={{ p: 2, border: 1, borderColor: 'grey.700', borderRadius: 1, height: '150px', position: 'relative' }}>
             <Box sx={{ position: 'absolute', width: '100%', height: '70%', bgcolor: 'white', top: 0, left: 0 }} />
             <Box sx={{ position: 'absolute', width: '100%', height: '30%', bgcolor: 'grey.700', bottom: 0, left: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-              <Typography variant="h6" sx={{ mb: 1, color: 'white', textAlign: 'center' }}>Board {index + 1}</Typography>
-              <Typography variant="body1" sx={{ color: 'white', textAlign: 'center' }}>Description {index + 1}</Typography>
+              <Typography variant="h6" sx={{ mb: 1, color: 'white', textAlign: 'left', paddingLeft: '8px' }}>Board {index + 1}</Typography>
+              <Typography variant="body1" sx={{ color: 'white', textAlign: 'left', paddingLeft: '8px' }}>Description {index + 1}</Typography>
             </Box>
           </Paper>
         </Grid>
