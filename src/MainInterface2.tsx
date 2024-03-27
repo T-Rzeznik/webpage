@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AppBar, Toolbar, Typography, InputBase, IconButton, Avatar, Box, Grid, Paper, Menu, MenuItem, ButtonBase } from '@mui/material';
+import { AppBar, Toolbar, Typography, InputBase, IconButton, Avatar, Box, Grid, Paper, Menu, MenuItem } from '@mui/material';
 import { Menu as MenuIcon, Search as SearchIcon } from '@mui/icons-material';
 
 const MainInterface2: React.FC = () => {
@@ -13,25 +13,18 @@ const MainInterface2: React.FC = () => {
     setAnchorEl(null);
   };
 
-  const handleRectClick = (boardIndex: number) => {
-    console.log(`Rectangle ${boardIndex + 1} clicked`);
-    // Add your click handling logic here
-  };
-
   const renderBoards = () => {
     const boards = [];
     for (let index = 0; index < 9; index++) {
       boards.push(
         <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
-          <ButtonBase onClick={() => handleRectClick(index)} sx={{ width: '100%', height: '150px' }}>
-            <Paper sx={{ p: 2, border: 1, borderColor: 'grey.700', borderRadius: 1, position: 'relative', height: '100%' }}>
-              <Box sx={{ position: 'absolute', width: '100%', height: '70%', bgcolor: 'white', top: 0, left: 0 }} />
-              <Box sx={{ position: 'absolute', width: '100%', height: '30%', bgcolor: 'grey.700', bottom: 0, left: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                <Typography variant="h6" sx={{ mb: 1, color: 'white', textAlign: 'left', paddingLeft: '8px' }}>Board {index + 1}</Typography>
-                <Typography variant="body1" sx={{ color: 'white', textAlign: 'left', paddingLeft: '8px' }}>Description {index + 1}</Typography>
-              </Box>
-            </Paper>
-          </ButtonBase>
+          <Paper sx={{ p: 2, border: 1, borderColor: 'grey.700', borderRadius: 1, height: '150px', position: 'relative' }}>
+            <Box sx={{ position: 'absolute', width: '100%', height: '70%', bgcolor: 'white', top: 0, left: 0 }} />
+            <Box sx={{ position: 'absolute', width: '100%', height: '30%', bgcolor: 'grey.700', bottom: 0, left: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+              <Typography variant="h6" sx={{ mb: 1, color: 'white', textAlign: 'left', paddingLeft: '8px' }}>Board {index + 1}</Typography>
+              <Typography variant="body1" sx={{ color: 'white', textAlign: 'left', paddingLeft: '8px' }}>Description {index + 1}</Typography>
+            </Box>
+          </Paper>
         </Grid>
       );
     }
