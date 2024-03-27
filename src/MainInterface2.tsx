@@ -18,13 +18,11 @@ const MainInterface2: React.FC = () => {
     for (let index = 0; index < 9; index++) {
       boards.push(
         <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
-          <Paper sx={{ p: 2, position: 'relative' }}>
-            <Box sx={{ height: '100%', position: 'absolute', top: 0, left: 0, width: '100%', backgroundColor: 'white', opacity: 0.7 }} />
-            <Box sx={{ height: '30%', position: 'absolute', bottom: 0, left: 0, width: '100%', backgroundColor: 'grey.700', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '8px' }}>
-              <Typography variant="h6">Board {index + 1}</Typography>
-            </Box>
-            <Box sx={{ height: '70%', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
-              <Typography variant="body1" sx={{ color: 'text.secondary' }}>Description {index + 1}</Typography>
+          <Paper sx={{ p: 2, border: 1, borderColor: 'grey.700', borderRadius: 1, height: '150px', position: 'relative' }}>
+            <Box sx={{ position: 'absolute', width: '100%', height: '70%', bgcolor: 'white', top: 0, left: 0 }} />
+            <Box sx={{ position: 'absolute', width: '100%', height: '30%', bgcolor: 'grey.700', bottom: 0, left: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+              <Typography variant="h6" sx={{ mb: 1, color: 'white', textAlign: 'center' }}>Board {index + 1}</Typography>
+              <Typography variant="body1" sx={{ color: 'white', textAlign: 'center' }}>Description {index + 1}</Typography>
             </Box>
           </Paper>
         </Grid>
