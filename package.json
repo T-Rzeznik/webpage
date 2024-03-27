@@ -20,7 +20,7 @@
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4",
     "@mui/material": "^5.2.0",
-    "joy-ui": "1.0.1"
+    "joy-ui": "^1.0.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.17.0"
