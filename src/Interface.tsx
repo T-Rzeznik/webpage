@@ -20,7 +20,7 @@ const LargeRectangle: React.FC<LargeRectangleProps> = ({ title, description }) =
 export default LargeRectangle;
 
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { NavBar, Dropdown, Input, Avatar } from 'joy-ui';
 
 const TopBar: React.FC = () => {
@@ -56,10 +56,8 @@ const TopBar: React.FC = () => {
 export default TopBar;
 
 
-import React from 'react';
+
 import { PageContainer } from 'joy-ui';
-import TopBar from './TopBar';
-import LargeRectangle from './LargeRectangle';
 
 const MainInterface: React.FC = () => {
   return (
