@@ -7,7 +7,7 @@ import SignUp from './SignUp';
 import CreateTeamPage from './CreateTeam';
 import ColorPicker from './colorPicker';
 import MainInterface from './MainInterface';
-
+import MainInterface2 from './Interface';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +24,10 @@ const router = createBrowserRouter([
          
        <div style={{ marginTop: '20px' }}>
         <MainInterface/>
+      </div>
+
+      <div style={{ marginTop: '20px' }}>
+        <MainInterface2/>
       </div>
         
         <div style={{ marginTop: '20px' }}><CreateTeamPage /></div>
