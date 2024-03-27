@@ -1,4 +1,4 @@
-// LargeRectangle.tsx
+
 import React from 'react';
 import { Rectangle } from 'joy-ui';
 
@@ -19,7 +19,7 @@ const LargeRectangle: React.FC<LargeRectangleProps> = ({ title, description }) =
 
 export default LargeRectangle;
 
-// TopBar.tsx
+
 import React, { useState } from 'react';
 import { NavBar, Dropdown, Input, Avatar } from 'joy-ui';
 
@@ -55,7 +55,7 @@ const TopBar: React.FC = () => {
 
 export default TopBar;
 
-// MainInterface.tsx
+
 import React from 'react';
 import { PageContainer } from 'joy-ui';
 import TopBar from './TopBar';
@@ -81,4 +81,4 @@ const MainInterface: React.FC = () => {
   );
 };
 
-export default MainInterface;
+export default MainInterface2;
