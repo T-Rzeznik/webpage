@@ -7,7 +7,7 @@ import SignUp from './SignUp';
 import CreateTeamPage from './CreateTeam';
 import ColorPicker from './colorPicker';
 import MainInterface from './MainInterface';
-import MainInterface2 from './Interface/MainInterface';
+import MainInterface2 from './Interface/MainInterface2';
 
 const router = createBrowserRouter([
   {
