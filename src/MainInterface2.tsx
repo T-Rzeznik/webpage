@@ -33,7 +33,7 @@ const MainInterface2: React.FC = () => {
 
   const handleClick = (index: number) => {
     console.log(`Clicked on board ${index + 1}`);
-    // Add your logic for handling the click event here
+    
   };
 
   return (
