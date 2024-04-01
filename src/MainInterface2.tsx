@@ -37,7 +37,7 @@ const MainInterface2: React.FC = () => {
   };
 
   return (
-    <Box sx={{ flexGrow: 1, border: 1, borderColor: 'grey.500', borderRadius: 1 }}>
+    <Box sx={{ flexGrow: 1, width: '80%', margin: 'auto' }}>
       <AppBar position="static" sx={{ bgcolor: 'grey.700' }}>
         <Toolbar>
           <Typography variant="h6" noWrap sx={{ flexGrow: 1 }}>
@@ -106,4 +106,3 @@ const MainInterface2: React.FC = () => {
 };
 
 export default MainInterface2;
-
