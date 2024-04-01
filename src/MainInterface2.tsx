@@ -33,11 +33,10 @@ const MainInterface2: React.FC = () => {
 
   const handleClick = (index: number) => {
     console.log(`Clicked on board ${index + 1}`);
-    
   };
 
   return (
-    <Box sx={{ width: '80%', margin: 'auto' }}>
+    <Box sx={{ width: '80%', margin: '0 auto' }}>
       <AppBar position="static" sx={{ bgcolor: 'grey.700' }}>
         <Toolbar>
           <Typography variant="h6" noWrap sx={{ flexGrow: 1 }}>
