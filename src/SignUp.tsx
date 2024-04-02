@@ -1,5 +1,3 @@
-
-// SignUp.tsx
 import React, { useState } from 'react';
 import { TextField, Button, Container, Typography, Box, Link } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
