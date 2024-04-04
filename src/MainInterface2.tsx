@@ -1,10 +1,16 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 import { AppBar, Toolbar, Typography, InputBase, IconButton, Avatar, Box, Grid, Paper, Menu, MenuItem, ButtonBase } from '@mui/material';
-import { Menu as MenuIcon, Search as SearchIcon } from '@mui/icons-material';
+import { Menu as MenuIcon, Search as SearchIcon, Add as AddIcon } from '@mui/icons-material';
+
+interface Board {
+  title: string;
+  description: string;
+}
 
 const MainInterface2: React.FC = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const [boards, setBoards] = useState<Board[]>([]);
 
   const handleMenuClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
@@ -15,26 +21,25 @@ const MainInterface2: React.FC = () => {
   };
 
   const renderBoards = () => {
-    const boards = [];
-    for (let index = 0; index < 9; index++) {
-      boards.push(
-        <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
-          <ButtonBase component={Paper} sx={{ p: 3, border: 1, borderColor: 'grey.700', borderRadius: 1, height: '170px', width: '90%', position: 'relative', }} onClick={() => handleClick(index)}>
-            <Box sx={{ position: 'absolute', width: '100%', height: '70%', bgcolor: 'white', top: 0, left: 0 }} />
-            <Box sx={{ position: 'absolute', width: '100%', height: '30%', bgcolor: 'grey.700', bottom: 0, left: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-              <Typography variant="h6" sx={{ mb: 1, color: 'white', textAlign: 'left', paddingLeft: '8px' }}>Board {index + 1}</Typography>
-              <Typography variant="body1" sx={{ color: 'white', textAlign: 'left', paddingLeft: '8px' }}>Description {index + 1}</Typography>
-            </Box>
-          </ButtonBase>
-        </Grid>
-      );
-    }
-    return boards;
+    return boards.map((board, index) => (
+      <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+        <ButtonBase component={Paper} sx={{ p: 3, border: 1, borderColor: 'grey.700', borderRadius: 1, height: '170px', width: '90%', position: 'relative', }}>
+          <Box sx={{ position: 'absolute', width: '100%', height: '70%', bgcolor: 'white', top: 0, left: 0 }} />
+          <Box sx={{ position: 'absolute', width: '100%', height: '30%', bgcolor: 'grey.700', bottom: 0, left: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <Typography variant="h6" sx={{ mb: 1, color: 'white', textAlign: 'left', paddingLeft: '8px' }}>Board {index + 1}</Typography>
+            <Typography variant="body1" sx={{ color: 'white', textAlign: 'left', paddingLeft: '8px' }}>Description {index + 1}</Typography>
+          </Box>
+        </ButtonBase>
+      </Grid>
+    ));
   };
 
-  const handleClick = (index: number) => {
-    console.log(`Clicked on board ${index + 1}`);
-    
+  const handleClick = () => {
+    const newBoard: Board = {
+      title: `Title ${boards.length + 1}`,
+      description: `Description ${boards.length + 1}`
+    };
+    setBoards([...boards, newBoard]);
   };
 
   return (
@@ -96,6 +101,14 @@ const MainInterface2: React.FC = () => {
               <Avatar sx={{ bgcolor: 'primary.main' }}>P</Avatar>
             </IconButton>
           </Box>
+          <IconButton
+            size="large"
+            aria-label="add board"
+            color="inherit"
+            onClick={handleClick}
+          >
+            <AddIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
       <Typography variant="h4" sx={{ mt: 2, ml: 2 }}>All Boards</Typography>
