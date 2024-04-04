@@ -11,6 +11,7 @@ interface Board {
 const MainInterface2: React.FC = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [boards, setBoards] = useState<Board[]>([]);
+  const minComponentHeight = 300; // Set the minimum height here
 
   const handleMenuClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
@@ -43,7 +44,7 @@ const MainInterface2: React.FC = () => {
   };
 
   return (
-    <Box sx={{ flexGrow: 1, border: 1, borderColor: 'grey.500', borderRadius: 1, width: '80vw', maxWidth: '80vw', maxHeight: '80vh', overflow: 'auto' }}>
+    <Box sx={{ flexGrow: 1, border: 1, borderColor: 'grey.500', borderRadius: 1, width: '80vw', maxWidth: '80vw', minHeight: minComponentHeight, maxHeight: '80vh', overflow: 'auto' }}>
       <AppBar position="static" sx={{ bgcolor: 'grey.700' }}>
         <Toolbar>
           <Typography variant="h6" noWrap sx={{ flexGrow: 1 }}>
