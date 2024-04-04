@@ -23,7 +23,7 @@ const MainInterface2: React.FC = () => {
   const renderBoards = () => {
     return boards.map((board, index) => (
       <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
-        <ButtonBase component={Paper} sx={{ p: 3, border: 1, borderColor: 'grey.700', borderRadius: 1, height: '170px', width: '90%', position: 'relative', }}>
+        <ButtonBase component={Paper} sx={{ p: 3, border: 1, borderColor: 'grey.700', borderRadius: 1, height: '170px', width: '90%', position: 'relative', overflow: 'hidden' }}>
           <Box sx={{ position: 'absolute', width: '100%', height: '70%', bgcolor: 'white', top: 0, left: 0 }} />
           <Box sx={{ position: 'absolute', width: '100%', height: '30%', bgcolor: 'grey.700', bottom: 0, left: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <Typography variant="h6" sx={{ mb: 1, color: 'white', textAlign: 'left', paddingLeft: '8px' }}>{board.title}</Typography>
@@ -43,7 +43,7 @@ const MainInterface2: React.FC = () => {
   };
 
   return (
-    <Box sx={{ flexGrow: 1, border: 1, borderColor: 'grey.500', borderRadius: 1, width: 800, height: 600 }}>
+    <Box sx={{ flexGrow: 1, border: 1, borderColor: 'grey.500', borderRadius: 1, width: '80vw', maxWidth: '80vw', maxHeight: '80vh', overflow: 'auto' }}>
       <AppBar position="static" sx={{ bgcolor: 'grey.700' }}>
         <Toolbar>
           <Typography variant="h6" noWrap sx={{ flexGrow: 1 }}>
